@@ -150,7 +150,7 @@ public class BinomialNewEngine implements BucketBasedEngine
          * We repeat the operation twice (if needed) to get a better balance.
          */
         long h = hash;
-        for( int i = 0; i < 2; ++i )
+        for( int i = 0; i < 4; ++i )
         {
 
             h = rehash( h, upperTreeFilter );
