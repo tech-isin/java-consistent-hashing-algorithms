@@ -156,6 +156,9 @@ public class BinomialNewEngine implements BucketBasedEngine
             h = rehash( h, upperTreeFilter );
             bucket = (int) h & upperTreeFilter;
             
+            if( bucket <= lowerTreeFilter )
+                break;
+
             if( bucket < size )
                 return bucket;
 
